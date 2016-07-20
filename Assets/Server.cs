@@ -122,7 +122,10 @@ public class Server : MonoBehaviour {
     }
     public void UpdateMove(int direction)
     {
+        
         NewtworkClientSend(direction);
+        if(ServerMode)
+            LocalMoveScript.move(direction);
     }
 
     // -----------------------------Network Actions bellow-----------------------------
